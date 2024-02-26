@@ -1,10 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:new_grad_proj/screens/upcoming_event.dart';
 import 'package:new_grad_proj/widgets/Date_Piker.dart';
 import 'package:new_grad_proj/widgets/Time_pick.dart';
-
-import 'package:new_grad_proj/utli/event.dart';
 
 class Attend_Event extends StatelessWidget {
   final controltext = TextEditingController();
@@ -19,8 +18,8 @@ class Attend_Event extends StatelessWidget {
                   borderRadius: BorderRadius.circular(50), color: Colors.blue),
               child: IconButton(
                   color: Colors.blue,
-                  onPressed: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => CreateEvent())),
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Upcoming_Event())),
                   icon: const Icon(
                     size: 30,
                     Icons.arrow_back,

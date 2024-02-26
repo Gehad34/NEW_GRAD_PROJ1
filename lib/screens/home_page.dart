@@ -101,6 +101,14 @@ class Home_Page extends StatelessWidget {
         ),
         body: ListView(children: [
           userposts("name", "2hours",
+              "title title title titletitle titletitle title", true),
+          userposts("name", "2hours",
+              "title title title titletitle titletitle title", true),
+          userposts("name", "2hours",
+              "title title title titletitle titletitle title", true),
+          userposts("name", "2hours",
+              "title title title titletitle titletitle title", true),
+          userposts("name", "2hours",
               "title title title titletitle titletitle title", true)
         ]));
   }

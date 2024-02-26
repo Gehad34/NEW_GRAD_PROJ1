@@ -23,6 +23,30 @@ class Notification_page extends StatelessWidget {
             time: 'hours ago',
             title: 'has followed you',
           ),
+          notification_post(
+            isOnline: true,
+            name: 'name',
+            time: 'hours ago',
+            title: 'has followed you',
+          ),
+          notification_post(
+            isOnline: false,
+            name: 'name',
+            time: 'hours ago',
+            title: 'has followed you',
+          ),
+          notification_post(
+            isOnline: true,
+            name: 'name',
+            time: 'hours ago',
+            title: 'has followed you',
+          ),
+          notification_post(
+            isOnline: false,
+            name: 'name',
+            time: 'hours ago',
+            title: 'has followed you',
+          ),
         ],
       ));
 }

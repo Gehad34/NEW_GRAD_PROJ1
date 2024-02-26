@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_grad_proj/screens/home_page.dart';
 import 'package:new_grad_proj/utli/attendevent.dart';
 
 import 'package:new_grad_proj/utli/posts/eventpost.dart';
@@ -12,16 +13,29 @@ class Upcoming_Event extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
-              title: const Text(
-                'Upcoming Event',
-                style: TextStyle(
-                  color: Color(0xff12306C),
-                  fontSize: 30,
-                  fontWeight: FontWeight.w500,
-                ),
-                textAlign: TextAlign.end,
-              ),
               actions: [
+                Padding(
+                    padding: EdgeInsets.only(right: 8),
+                    child: IconButton(
+                        onPressed: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => Home_Page())),
+                        icon: Icon(
+                          Icons.arrow_back,
+                          size: 30,
+                        ))),
+                Padding(
+                  padding: EdgeInsets.only(right: 80, left: 20),
+                  child: const Text(
+                    'Upcoming Event',
+                    style: TextStyle(
+                      color: Color(0xff12306C),
+                      fontSize: 30,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                /* actions: [
                 Container(
                   width: 40.0,
                   height: 40.0,
@@ -74,6 +88,7 @@ class Upcoming_Event extends StatelessWidget {
                     ],
                   ),
                 ),
+              ],*/
               ],
               bottom: AppBar(actions: [
                 Container(

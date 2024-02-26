@@ -84,7 +84,28 @@ class inbox_page extends StatelessWidget {
               time: '3',
               msg: 'hi,howareyou',
               isOnline: true,
-              counter: 1)
+              counter: 1),
+          message_page(
+              dp: 'nn',
+              name: 'name',
+              time: '3',
+              msg: 'hi,howareyou',
+              isOnline: true,
+              counter: 7),
+          message_page(
+              dp: 'nn',
+              name: 'name',
+              time: '3',
+              msg: 'hi,howareyou',
+              isOnline: true,
+              counter: 5),
+          message_page(
+              dp: 'nn',
+              name: 'name',
+              time: '3',
+              msg: 'hi,howareyou',
+              isOnline: true,
+              counter: 4)
         ],
       ));
 }
