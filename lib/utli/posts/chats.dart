@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:new_grad_proj/widgets/chatbottomsheet.dart';
 import 'package:new_grad_proj/utli/chats_sample.dart';
 
@@ -22,16 +24,15 @@ class Chats extends StatelessWidget {
           title: Row(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(30),
-                child: Image.asset(
-                  "assets/images/Group 9204.png",
-                  height: 45,
-                  width: 45,
-                ),
-              ),
+                  borderRadius: BorderRadius.circular(30),
+                  child: Image.asset(
+                    "assets/images/Group 9204.png",
+                    height: 45,
+                    width: 45,
+                  )),
               Positioned(
                 bottom: 0.0,
-                left: 6.0,
+                left: 5.0,
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -52,13 +53,14 @@ class Chats extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(left: 10),
+                padding: EdgeInsets.only(left: 7),
                 child: Column(
                   children: [
                     Text(
                       name,
+                      style: TextStyle(fontSize: 20),
                     ),
-                    Text("activenow")
+                    Text("activenow", style: TextStyle(fontSize: 20))
                   ],
                 ),
               )

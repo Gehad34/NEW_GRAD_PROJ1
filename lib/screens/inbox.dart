@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:new_grad_proj/utli/messages.dart';
+import 'package:new_grad_proj/widgets/default%20text%20field.dart';
 
 class inbox_page extends StatelessWidget {
   final String dp;
@@ -9,6 +10,7 @@ class inbox_page extends StatelessWidget {
   final String msg;
   final bool isOnline;
   final int counter;
+  var SearchController5 = TextEditingController();
 
   inbox_page({
     Key? key,
@@ -26,53 +28,22 @@ class inbox_page extends StatelessWidget {
         bottom: AppBar(
           actions: [
             Padding(
-              padding: EdgeInsets.only(right: 0, left: 0),
-              child: Row(
-                children: [
-                  Padding(
-                      padding: EdgeInsets.only(left: 0, right: 50),
-                      child: Container(
-                        width: 250,
-                        height: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.grey[300]),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              border: InputBorder.none,
-                              hintText: 'Search',
-                              hintStyle: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w100)),
-                        ),
-                      )),
-                  SizedBox(
-                    width: 0,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 0, right: 0),
-                    child: Container(
-                      width: 50.0,
-                      height: 50.0,
-                      transformAlignment: Alignment.bottomRight,
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.blue,
-                      ),
-                      alignment: Alignment.center,
-                      child: IconButton(
-                        padding: const EdgeInsets.all(0),
-                        icon: const Icon(
-                          Icons.search,
-                          color: Colors.white,
-                        ),
-                        onPressed: () {},
-                      ),
-                    ),
-                  )
-                ],
+              padding: EdgeInsets.only(left: 10, right: 40),
+              child: Container(
+                width: 330,
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: DefaultTextField(
+                  controller: SearchController5,
+                  keyboardtype: TextInputType.text,
+                  labletext: "Search By Name",
+                  prefixicon: Icons.search,
+                  weight: double.infinity,
+                ),
               ),
-            )
+            ),
           ],
         ),
       ),

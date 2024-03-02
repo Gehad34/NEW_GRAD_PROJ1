@@ -10,106 +10,106 @@ class Home_Page extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          title: const Text(
-            'Discover',
-            style: TextStyle(
-              color: Color(0xff344054),
-              fontSize: Checkbox.width,
-              fontWeight: FontWeight.w500,
-            ),
-            textAlign: TextAlign.end,
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        title: const Text(
+          'Discover',
+          style: TextStyle(
+            color: Color(0xff344054),
+            fontSize: Checkbox.width,
+            fontWeight: FontWeight.w500,
           ),
-          actions: <Widget>[
-            Container(
-              width: 30.0,
-              height: 30.0,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.blue,
-              ),
-              child: IconButton(
-                padding: const EdgeInsets.all(3),
-                icon: const Icon(
-                  Icons.auto_stories_outlined,
-                  color: Colors.white,
-                ),
-                onPressed: () => Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => Guide_Lines())),
-              ),
-            ),
-            const SizedBox(
-              width: 15,
-            ),
-            Container(
-              width: 30.0,
-              height: 30.0,
-              transformAlignment: Alignment.bottomRight,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.blue,
-              ),
-              alignment: Alignment.center,
-              child: IconButton(
-                padding: const EdgeInsets.all(3),
-                icon: const Icon(
-                  Icons.search,
-                  color: Colors.white,
-                ),
-                onPressed: () => Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => Search())),
-              ),
-            ),
-            const SizedBox(
-              width: 15,
-            ),
-            Container(
-              width: 30.0,
-              height: 30.0,
-              alignment: Alignment.center,
-              transformAlignment: Alignment.bottomRight,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.blue,
-              ),
-              child: Stack(
-                alignment: Alignment.topLeft,
-                children: [
-                  IconButton(
-                    padding: const EdgeInsets.all(3),
-                    icon: const Icon(
-                      Icons.notifications,
-                      color: Colors.white,
-                    ),
-                    onPressed: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: (context) => Notification_page())),
-                  ),
-                  Container(
-                    width: 15,
-                    height: 15,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.red,
-                        border: Border.all(color: Colors.white, width: 1)),
-                  ),
-                ],
-              ),
-            ),
-          ],
+          textAlign: TextAlign.end,
         ),
-        body: ListView(children: [
-          userposts("name", "2hours",
-              "title title title titletitle titletitle title", true),
-          userposts("name", "2hours",
-              "title title title titletitle titletitle title", true),
-          userposts("name", "2hours",
-              "title title title titletitle titletitle title", true),
-          userposts("name", "2hours",
-              "title title title titletitle titletitle title", true),
-          userposts("name", "2hours",
-              "title title title titletitle titletitle title", true)
-        ]));
+        actions: <Widget>[
+          Container(
+            width: 30.0,
+            height: 30.0,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.blue,
+            ),
+            child: IconButton(
+              padding: const EdgeInsets.all(3),
+              icon: const Icon(
+                Icons.auto_stories_outlined,
+                color: Colors.white,
+              ),
+              onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Guide_Lines())),
+            ),
+          ),
+          const SizedBox(
+            width: 15,
+          ),
+          Container(
+            width: 30.0,
+            height: 30.0,
+            transformAlignment: Alignment.bottomRight,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.blue,
+            ),
+            alignment: Alignment.center,
+            child: IconButton(
+              padding: const EdgeInsets.all(3),
+              icon: const Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+              onPressed: () => Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => Search())),
+            ),
+          ),
+          const SizedBox(
+            width: 15,
+          ),
+          Container(
+            width: 30.0,
+            height: 30.0,
+            alignment: Alignment.center,
+            transformAlignment: Alignment.bottomRight,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.blue,
+            ),
+            child: Stack(
+              alignment: Alignment.topLeft,
+              children: [
+                IconButton(
+                  padding: const EdgeInsets.all(3),
+                  icon: const Icon(
+                    Icons.notifications,
+                    color: Colors.white,
+                  ),
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Notification_page())),
+                ),
+                Container(
+                  width: 15,
+                  height: 15,
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.red,
+                      border: Border.all(color: Colors.white, width: 1)),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+      body: ListView(children: [
+        userposts("name", "2hours",
+            "title title title titletitle titletitle title", true),
+        userposts("name", "2hours",
+            "title title title titletitle titletitle title", true),
+        userposts("name", "2hours",
+            "title title title titletitle titletitle title", true),
+        userposts("name", "2hours",
+            "title title title titletitle titletitle title", true),
+        userposts("name", "2hours",
+            "title title title titletitle titletitle title", true)
+      ]),
+    );
   }
 }

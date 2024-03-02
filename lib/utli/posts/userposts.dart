@@ -157,7 +157,7 @@ class userposts extends StatelessWidget {
             height: 0,
           ),
         ]),
-      )
+      ),
     ]));
   }
 }

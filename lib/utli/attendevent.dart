@@ -1,9 +1,11 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new_grad_proj/screens/upcoming_event.dart';
 import 'package:new_grad_proj/widgets/Date_Piker.dart';
 import 'package:new_grad_proj/widgets/Time_pick.dart';
+import 'package:new_grad_proj/widgets/default%20text%20field.dart';
 
 class Attend_Event extends StatelessWidget {
   final controltext = TextEditingController();
@@ -36,10 +38,10 @@ class Attend_Event extends StatelessWidget {
           ])),
       body: ListView(children: [
         Padding(
-          padding: EdgeInsets.only(right: 230),
+          padding: EdgeInsets.only(right: 200, left: 20),
           child: Text(
             'Event Title',
-            style: TextStyle(color: Colors.blue, fontSize: 20),
+            style: TextStyle(color: Colors.black, fontSize: 20),
           ),
         ),
         Padding(
@@ -50,17 +52,17 @@ class Attend_Event extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   border: Border.all(width: sqrt1_2, color: Colors.blue)),
-              child: TextFormField(
+              child: DefaultTextField(
                 controller: TextEditingController(),
-                decoration: InputDecoration(
-                  hintText: 'EnterHere',
-                  hintStyle: TextStyle(fontWeight: FontWeight.w100),
-                  border: InputBorder.none,
-                ),
+                keyboardtype: TextInputType.text,
+                labletext: "Enter Here",
+                fillcolor: Color.fromARGB(255, 229, 229, 229),
+                // suffixicon: ,
+                weight: double.infinity,
               ),
             )),
         Padding(
-            padding: EdgeInsets.only(top: 10),
+            padding: EdgeInsets.only(top: 10, left: 20),
             child: Row(
               children: [
                 Text(
@@ -68,11 +70,11 @@ class Attend_Event extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
                 SizedBox(
-                  width: 200,
+                  width: 190,
                 ),
                 Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(25),
                         color: Colors.blue),
                     child: IconButton(
                       onPressed: () {},
@@ -84,7 +86,7 @@ class Attend_Event extends StatelessWidget {
               ],
             )),
         Padding(
-            padding: EdgeInsets.only(top: 10),
+            padding: EdgeInsets.only(top: 10, left: 20),
             child: Row(
               children: [
                 Text(
@@ -92,11 +94,11 @@ class Attend_Event extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
                 SizedBox(
-                  width: 280,
+                  width: 270,
                 ),
                 Container(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
+                        borderRadius: BorderRadius.circular(25),
                         color: Colors.blue),
                     child: IconButton(
                       onPressed: () {},
@@ -108,10 +110,10 @@ class Attend_Event extends StatelessWidget {
               ],
             )),
         Padding(
-          padding: EdgeInsets.only(right: 260),
+          padding: EdgeInsets.only(right: 200, left: 20, top: 20),
           child: Text(
             'Street',
-            style: TextStyle(color: Colors.blue, fontSize: 20),
+            style: TextStyle(color: Colors.black, fontSize: 20),
           ),
         ),
         Padding(
@@ -122,20 +124,20 @@ class Attend_Event extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
                   border: Border.all(width: sqrt1_2, color: Colors.blue)),
-              child: TextFormField(
+              child: DefaultTextField(
                 controller: TextEditingController(),
-                decoration: InputDecoration(
-                  hintText: 'EnterHere',
-                  hintStyle: TextStyle(fontWeight: FontWeight.w100),
-                  border: InputBorder.none,
-                ),
+                keyboardtype: TextInputType.text,
+                labletext: "Enter Here",
+                fillcolor: Color.fromARGB(255, 229, 229, 229),
+                // suffixicon: ,
+                weight: double.infinity,
               ),
             )),
         Padding(
-          padding: EdgeInsets.only(right: 260),
+          padding: EdgeInsets.only(right: 200, left: 20, top: 20),
           child: Text(
             'PlaceName',
-            style: TextStyle(color: Colors.blue, fontSize: 20),
+            style: TextStyle(color: Colors.black, fontSize: 20),
           ),
         ),
         Padding(
@@ -146,20 +148,20 @@ class Attend_Event extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
                   border: Border.all(width: sqrt1_2, color: Colors.blue)),
-              child: TextFormField(
+              child: DefaultTextField(
                 controller: TextEditingController(),
-                decoration: InputDecoration(
-                  hintText: 'EnterHere',
-                  hintStyle: TextStyle(fontWeight: FontWeight.w100),
-                  border: InputBorder.none,
-                ),
+                keyboardtype: TextInputType.text,
+                labletext: "Enter Here",
+                fillcolor: Color.fromARGB(255, 229, 229, 229),
+                // suffixicon: ,
+                weight: double.infinity,
               ),
             )),
         Padding(
-          padding: EdgeInsets.only(right: 260),
+          padding: EdgeInsets.only(right: 200, left: 20, top: 20),
           child: Text(
             'Discribtion',
-            style: TextStyle(color: Colors.blue, fontSize: 20),
+            style: TextStyle(color: Colors.black, fontSize: 20),
           ),
         ),
         Padding(
@@ -170,90 +172,106 @@ class Attend_Event extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
                   border: Border.all(width: sqrt1_2, color: Colors.blue)),
-              child: TextFormField(
+              child: DefaultTextField(
                 controller: TextEditingController(),
-                decoration: InputDecoration(
-                  hintText: 'EnterHere',
-                  hintStyle: TextStyle(fontWeight: FontWeight.w100),
-                  border: InputBorder.none,
-                ),
+                keyboardtype: TextInputType.emailAddress,
+                labletext: "Enter Here",
+                fillcolor: Color.fromARGB(255, 229, 229, 229),
+                // suffixicon: ,
+                weight: double.infinity,
               ),
             )),
         Padding(
-            padding: EdgeInsets.only(top: 0),
-            child: Row(
-              children: [pick_time()],
-            )),
-        Padding(
-            padding: EdgeInsets.only(top: 0),
+            padding: EdgeInsets.only(top: 0, left: 20),
             child: Row(children: [
               Pick_Date(),
             ])),
+        Padding(
+          padding: EdgeInsets.only(right: 200, left: 20, top: 10),
+          child: Text(
+            'Time',
+            style: TextStyle(color: Colors.black, fontSize: 20),
+          ),
+        ),
+        Padding(
+            padding: EdgeInsets.only(top: 0, left: 30),
+            child: Row(
+              children: [pick_time()],
+            )),
         Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 200, left: 0),
+              padding: EdgeInsets.only(right: 290, left: 20),
               child: Text(
                 'Privacy',
-                style: TextStyle(color: Colors.blue, fontSize: 20),
+                style: TextStyle(color: Colors.black, fontSize: 20),
               ),
             ),
             Padding(
                 padding: EdgeInsets.only(right: 20, left: 20),
-                child: Row(children: [
-                  Container(
-                    width: 100,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [
-                          Text(
-                            "Public",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Icon(
-                            Icons.public,
-                            color: Colors.white,
-                          )
-                        ],
-                      ),
+                child: /* Theme(
+                    data: ThemeData(
+                        elevatedButtonTheme: ElevatedButtonThemeData(
+                            style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                    ))),
+                    child:*/
+                    Row(children: [
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Row(
+                      children: [
+                        Text(
+                          "Public",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Icon(
+                          Icons.public,
+                          color: Colors.white,
+                        )
+                      ],
                     ),
+                    style: ButtonStyle(backgroundColor:
+                        MaterialStateColor.resolveWith(
+                            (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                      return Colors.blue;
+                    })),
                   ),
                   SizedBox(
-                    width: 140,
+                    width: 80,
                   ),
-                  Container(
-                    width: 100,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(8)),
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Row(
-                        children: [
-                          Text(
-                            "Private",
-                            style: TextStyle(color: Colors.white),
-                          ),
-                          SizedBox(
-                            width: 1,
-                          ),
-                          Icon(
-                            Icons.private_connectivity_rounded,
-                            size: 30,
-                            color: Colors.white,
-                          )
-                        ],
-                      ),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: Row(
+                      children: [
+                        Text(
+                          "Private",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                        SizedBox(
+                          width: 1,
+                        ),
+                        Icon(
+                          Icons.private_connectivity_rounded,
+                          size: 30,
+                          color: Colors.white,
+                        )
+                      ],
                     ),
+                    style: ButtonStyle(backgroundColor:
+                        MaterialStateColor.resolveWith(
+                            (Set<MaterialState> states) {
+                      if (states.contains(MaterialState.pressed)) {
+                        return Colors.grey;
+                      }
+                      return Colors.blue;
+                    })),
                   ),
                 ]))
           ],

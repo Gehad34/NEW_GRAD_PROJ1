@@ -33,7 +33,7 @@ class pick_DateState extends State<Pick_Date> {
                     color: Colors.blue,
                   ), //icon of text field
                   labelText: "Enter Date",
-                  labelStyle: TextStyle(color: Colors.blue),
+                  labelStyle: TextStyle(color: Colors.grey[300]),
                   //label text of field
                 ),
                 readOnly:

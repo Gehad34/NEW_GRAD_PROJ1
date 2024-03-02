@@ -9,7 +9,7 @@ class Guidelines_Gridview extends StatelessWidget {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, mainAxisSpacing: 8, crossAxisSpacing: 8),
         itemBuilder: (context, index) => Card(
-            color: const Color.fromARGB(255, 33, 219, 243),
+            color: const Color.fromARGB(255, 18, 122, 208),
             child: Padding(
               padding: EdgeInsets.all(16),
               child: textlist[index],

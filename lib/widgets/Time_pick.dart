@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 
 class pick_time extends StatefulWidget {
@@ -22,20 +25,20 @@ class pick_timeState extends State<pick_time> {
   Widget build(BuildContext context) {
     return Row(children: [
       Container(
-          width: 150,
+          decoration: BoxDecoration(
+              border: Border.all(color: Colors.blue),
+              borderRadius: BorderRadius.all(Radius.circular(8))),
+          width: 100,
           padding: EdgeInsets.only(top: 0),
-          height: 70,
+          height: 40,
           child: Center(
               child: TextField(
             controller: timeinput, //editing controller of this TextField
             decoration: InputDecoration(
-                icon: Icon(
-                  Icons.timer,
-                  size: 40,
-                  color: Colors.blue,
-                ), //icon of text field
+                border: InputBorder.none,
                 labelText: "From",
-                labelStyle: TextStyle(color: Colors.blue) //label text of field
+                labelStyle:
+                    TextStyle(color: Colors.grey[300]) //label text of field
                 ),
             readOnly:
                 true, //set it true, so that user will not able to edit text
@@ -62,8 +65,7 @@ class pick_timeState extends State<pick_time> {
                     .parse(pickedTime.format(context).toString());
                 //converting to DateTime so that we can further format on different pattern.
                 print(parsedTime); //output 1970-01-01 22:53:00.000
-                String formattedTime =
-                    DateFormat('HH:mm:ss').format(parsedTime);
+                String formattedTime = DateFormat('HH:mm').format(parsedTime);
                 print(formattedTime); //output 14:59:00
                 //DateFormat() is from intl package, you can format the time on any pattern you need.
                 setState(() {
@@ -75,23 +77,22 @@ class pick_timeState extends State<pick_time> {
             },
           ))),
       SizedBox(
-        width: 20,
+        width: 100,
       ),
       Container(
-          width: 150,
+          decoration: BoxDecoration(
+              border: Border.all(color: Colors.blue),
+              borderRadius: BorderRadius.all(Radius.circular(8))),
+          width: 100,
           padding: EdgeInsets.only(top: 0),
-          height: 70,
+          height: 40,
           child: Center(
               child: TextField(
             controller: timeinput, //editing controller of this TextField
             decoration: InputDecoration(
-              icon: Icon(
-                Icons.timer,
-                size: 40,
-                color: Colors.blue,
-              ), //icon of text field
+              border: InputBorder.none,
               labelText: "To",
-              labelStyle: TextStyle(color: Colors.blue),
+              labelStyle: TextStyle(color: Colors.grey[300]),
               //label text of field
             ),
             readOnly:
@@ -119,8 +120,7 @@ class pick_timeState extends State<pick_time> {
                     .parse(pickedTime.format(context).toString());
                 //converting to DateTime so that we can further format on different pattern.
                 print(parsedTime); //output 1970-01-01 22:53:00.000
-                String formattedTime =
-                    DateFormat('HH:mm:ss').format(parsedTime);
+                String formattedTime = DateFormat('HH:mm').format(parsedTime);
                 print(formattedTime); //output 14:59:00
                 //DateFormat() is from intl package, you can format the time on any pattern you need.
                 setState(() {

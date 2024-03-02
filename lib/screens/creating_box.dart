@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:new_grad_proj/widgets/default%20text%20field.dart';
 
 class CreateBox extends StatelessWidget {
   CreateBox({Key? key}) : super(key: key);
@@ -45,7 +46,7 @@ class CreateBox extends StatelessWidget {
                   ),
                 ),
               ]),
-              Padding(
+              /*  Padding(
                 padding: EdgeInsets.only(top: 30),
                 child: Container(
                   height: 135,
@@ -67,6 +68,20 @@ class CreateBox extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),*/
+              Padding(
+                padding: const EdgeInsets.only(
+                    left: 15, right: 15, top: 0, bottom: 0),
+                child: DefaultTextField(
+                  controller: TextEditingController(),
+                  keyboardtype: TextInputType.text,
+
+                  labletext: "What Is IN Your Head....",
+                  fillcolor: Color.fromARGB(255, 229, 229, 229),
+                  // suffixicon: ,
+                  height: 170,
+                  weight: double.infinity,
+                ),
               ),
               Container(
                   child: Padding(
@@ -84,7 +99,7 @@ class CreateBox extends StatelessWidget {
                             onPressed: () {},
                             icon: const Icon(
                               Icons.camera_alt_outlined,
-                              color: Colors.grey,
+                              color: Colors.blue,
                               size: 30,
                             )),
                         const SizedBox(
@@ -102,7 +117,7 @@ class CreateBox extends StatelessWidget {
                             onPressed: () {},
                             icon: const Icon(
                               Icons.edit_document,
-                              color: Colors.grey,
+                              color: Colors.blue,
                               size: 30,
                             )),
                         const SizedBox(
@@ -120,7 +135,7 @@ class CreateBox extends StatelessWidget {
                             onPressed: () {},
                             icon: const Icon(
                               Icons.photo_album_outlined,
-                              color: Colors.grey,
+                              color: Colors.blue,
                               size: 30,
                             )),
                         const SizedBox(

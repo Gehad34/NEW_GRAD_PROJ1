@@ -19,7 +19,7 @@ class Bottom_navy extends StatefulWidget {
 class _bottomnavy extends State<Bottom_navy> {
   int _selectedIndex = 0;
   final List<Widget> _widgetoptions = <Widget>[
-    Home_Page(),
+    const Home_Page(),
     Upcoming_Event(),
     add_page(),
     inbox_page(
@@ -43,7 +43,7 @@ class _bottomnavy extends State<Bottom_navy> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/home': (context) => Home_Page(),
+        '/home': (context) => const Home_Page(),
         '/event': (context) => Upcoming_Event(),
         '/add': (context) => add_page(),
         '/inbox': (context) => inbox_page(

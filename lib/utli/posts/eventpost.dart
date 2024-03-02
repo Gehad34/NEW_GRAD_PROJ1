@@ -66,7 +66,7 @@ class Event_Post extends StatelessWidget {
                             child: const Row(children: [
                               Column(children: [
                                 Text(
-                                  'vew',
+                                  'vew ',
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontStyle: FontStyle.normal,

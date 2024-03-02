@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_grad_proj/utli/posts/guidelines_post.dart';
+import 'package:new_grad_proj/widgets/default%20text%20field.dart';
 
 class Guide_Lines extends StatelessWidget {
   @override
@@ -8,37 +9,20 @@ class Guide_Lines extends StatelessWidget {
       appBar: AppBar(
         actions: [
           Padding(
-            padding: EdgeInsets.only(right: 80, left: 0),
-            child: Row(children: [
-              Container(
-                  width: 250,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.grey[300]),
-                  child: Row(children: [
-                    Container(
-                      width: 50,
-                      child: TextField(
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            hintText: 'Search',
-                            hintStyle: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.w100)),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 150,
-                    ),
-                    IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.search,
-                          color: Colors.black,
-                        ))
-                  ]))
-            ]),
+            padding: EdgeInsets.only(right: 50, left: 20),
+            child: Container(
+              width: 300,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 25, right: 25, top: 10),
+                child: DefaultTextField(
+                  controller: SearchController(),
+                  keyboardtype: TextInputType.text,
+                  labletext: "Search ",
+                  prefixicon: Icons.search,
+                  weight: double.infinity,
+                ),
+              ),
+            ),
           )
         ],
       ),

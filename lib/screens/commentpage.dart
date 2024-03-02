@@ -10,13 +10,16 @@ class comment_page extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(
-              onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Home_Page())),
-              icon: Icon(
-                Icons.close,
-                color: Colors.blue,
-              ))
+          Padding(
+              padding: EdgeInsets.only(right: 320),
+              child: IconButton(
+                  onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Home_Page())),
+                  icon: Icon(
+                    Icons.close,
+                    color: Colors.blue,
+                    size: 30,
+                  )))
         ],
         bottom: AppBar(
           automaticallyImplyLeading: false,

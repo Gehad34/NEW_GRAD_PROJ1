@@ -15,13 +15,16 @@ class Chat_bottom_sheet extends StatelessWidget {
       child: Row(children: [
         Padding(
           padding: EdgeInsets.only(left: 8),
-          child: IconButton(
-            icon: Icon(
-              Icons.send,
-              color: Colors.blue,
-              size: 30,
+          child: RotatedBox(
+            quarterTurns: 90,
+            child: IconButton(
+              icon: Icon(
+                Icons.send,
+                color: Colors.blue,
+                size: 30,
+              ),
+              onPressed: () {},
             ),
-            onPressed: () {},
           ),
         ),
         Padding(

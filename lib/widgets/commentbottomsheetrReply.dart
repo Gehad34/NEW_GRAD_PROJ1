@@ -30,13 +30,16 @@ class Comment_bottom_sheet_Reply extends StatelessWidget {
               Row(children: [
                 Padding(
                   padding: EdgeInsets.only(left: 8),
-                  child: IconButton(
-                    icon: Icon(
-                      Icons.send,
-                      color: Colors.blue,
-                      size: 30,
+                  child: RotatedBox(
+                    quarterTurns: 90,
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.send,
+                        color: Colors.blue,
+                        size: 30,
+                      ),
+                      onPressed: () {},
                     ),
-                    onPressed: () {},
                   ),
                 ),
                 Padding(
