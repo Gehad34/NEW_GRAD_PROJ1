@@ -1,8 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:new_grad_proj/screens/upcoming_event.dart';
+import 'package:new_grad_proj/utli/options.dart';
 import 'package:new_grad_proj/widgets/Date_Piker.dart';
 import 'package:new_grad_proj/widgets/Time_pick.dart';
 import 'package:new_grad_proj/widgets/default%20text%20field.dart';
@@ -70,19 +71,21 @@ class Attend_Event extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
                 SizedBox(
-                  width: 190,
+                  width: 150,
                 ),
-                Container(
+                Drop_Down()
+                /* Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
                         color: Colors.blue),
                     child: IconButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Drop_Down())),
                       icon: Icon(
                         Icons.add,
                         color: Colors.white,
                       ),
-                    ))
+                    ))*/
               ],
             )),
         Padding(

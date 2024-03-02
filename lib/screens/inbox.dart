@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:new_grad_proj/widgets/dismissable_widget.dart';
 import 'package:new_grad_proj/utli/messages.dart';
 import 'package:new_grad_proj/widgets/default%20text%20field.dart';
 
@@ -11,6 +11,29 @@ class inbox_page extends StatelessWidget {
   final bool isOnline;
   final int counter;
   var SearchController5 = TextEditingController();
+  List items = [
+    message_page(
+        dp: 'jh',
+        name: 'name',
+        time: '2 hours',
+        msg: 'how are you',
+        isOnline: true,
+        counter: 3),
+    message_page(
+        dp: 'jh',
+        name: 'name',
+        time: '2 hours',
+        msg: 'how are you',
+        isOnline: true,
+        counter: 3),
+    message_page(
+        dp: 'jh',
+        name: 'name',
+        time: '2 hours',
+        msg: 'how are you',
+        isOnline: true,
+        counter: 3),
+  ];
 
   inbox_page({
     Key? key,
@@ -47,36 +70,66 @@ class inbox_page extends StatelessWidget {
           ],
         ),
       ),
-      body: ListView(
-        children: [
-          message_page(
-              dp: 'nn',
-              name: 'name',
-              time: '3',
-              msg: 'hi,howareyou',
-              isOnline: true,
-              counter: 1),
-          message_page(
-              dp: 'nn',
-              name: 'name',
-              time: '3',
-              msg: 'hi,howareyou',
-              isOnline: true,
-              counter: 7),
-          message_page(
-              dp: 'nn',
-              name: 'name',
-              time: '3',
-              msg: 'hi,howareyou',
-              isOnline: true,
-              counter: 5),
-          message_page(
-              dp: 'nn',
-              name: 'name',
-              time: '3',
-              msg: 'hi,howareyou',
-              isOnline: true,
-              counter: 4)
-        ],
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Dismissible(
+            confirmDismiss: (DismissDirection direction) async {
+              if (direction == DismissDirection.endToStart) {
+                return await showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return AlertDialog(
+                        title: Text('Delete'),
+                        content: Text(' Are YOU Sure You Want to Delete it ?'),
+                        actions: <Widget>[
+                          ElevatedButton(
+                              onPressed: () => Navigator.of(context).pop(true),
+                              child: Text("yes")),
+                          ElevatedButton(
+                              onPressed: () => Navigator.of(context).pop(false),
+                              child: Text("no")),
+                        ],
+                      );
+                    });
+              }
+            },
+            background: Container(
+              height: 10,
+              color: Colors.white,
+              margin:
+                  EdgeInsets.only(top: 30, left: 320, bottom: 10, right: 20),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(50)),
+                    color: Colors.blue),
+                child: Center(
+                  child: IconButton(
+                    icon: Icon(
+                      Icons.delete_outline,
+                      size: 35,
+                    ),
+                    color: Colors.white,
+                    onPressed: () {},
+                    //alignment: Alignment.bottomLeft,
+                  ),
+                ),
+              ),
+            ),
+            key: ValueKey(items[index]),
+            child: message_page(
+                dp: dp,
+                name: name,
+                time: time,
+                msg: msg,
+                isOnline: isOnline,
+                counter: counter),
+          );
+        },
       ));
+  Widget buildListTile(message_page item) => ListTile(
+        onTap: () {},
+      );
 }
+
+class DismissibleWidget {}

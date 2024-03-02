@@ -29,20 +29,6 @@ class Comment_bottom_sheet_Reply extends StatelessWidget {
               ),
               Row(children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 8),
-                  child: RotatedBox(
-                    quarterTurns: 90,
-                    child: IconButton(
-                      icon: Icon(
-                        Icons.send,
-                        color: Colors.blue,
-                        size: 30,
-                      ),
-                      onPressed: () {},
-                    ),
-                  ),
-                ),
-                Padding(
                     padding: EdgeInsets.only(left: 10),
                     child: Container(
                       alignment: Alignment.centerRight,
@@ -54,6 +40,20 @@ class Comment_bottom_sheet_Reply extends StatelessWidget {
                         ),
                       ),
                     )),
+                Padding(
+                  padding: EdgeInsets.only(left: 40),
+                  child: RotatedBox(
+                    quarterTurns: 180,
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.send,
+                        color: Colors.blue,
+                        size: 30,
+                      ),
+                      onPressed: () {},
+                    ),
+                  ),
+                ),
               ]),
             ])));
   }
