@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:new_grad_proj/screens/inbox.dart';
 import 'package:new_grad_proj/widgets/chatbottomsheet.dart';
 import 'package:new_grad_proj/utli/chats_sample.dart';
 
@@ -30,7 +31,7 @@ class Chats extends StatelessWidget {
                     height: 45,
                     width: 45,
                   )),
-              Positioned(
+              /* Positioned(
                 bottom: 0.0,
                 left: 5.0,
                 child: Container(
@@ -51,7 +52,7 @@ class Chats extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
+              ),*/
               Padding(
                 padding: EdgeInsets.only(left: 7),
                 child: Column(

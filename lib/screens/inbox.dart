@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:new_grad_proj/widgets/dismissable_widget.dart';
 import 'package:new_grad_proj/utli/messages.dart';
 import 'package:new_grad_proj/widgets/default%20text%20field.dart';
 
+// ignore: must_be_immutable
 class inbox_page extends StatelessWidget {
   final String dp;
   final String name;
@@ -49,6 +49,7 @@ class inbox_page extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
         bottom: AppBar(
+          automaticallyImplyLeading: false,
           actions: [
             Padding(
               padding: EdgeInsets.only(left: 10, right: 40),

@@ -27,6 +27,11 @@ class message_page extends StatelessWidget {
             contentPadding: EdgeInsets.all(0),
             leading: Stack(
               children: <Widget>[
+                IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.arrow_back,
+                    )),
                 CircleAvatar(
                   backgroundImage: AssetImage(
                     "assets/images/Group 9204.png",

@@ -13,17 +13,8 @@ class Upcoming_Event extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
+              automaticallyImplyLeading: true,
               actions: [
-                Padding(
-                    padding: EdgeInsets.only(right: 8),
-                    child: IconButton(
-                        onPressed: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                                builder: (context) => Home_Page())),
-                        icon: Icon(
-                          Icons.arrow_back,
-                          size: 30,
-                        ))),
                 Padding(
                   padding: EdgeInsets.only(right: 80, left: 20),
                   child: const Text(

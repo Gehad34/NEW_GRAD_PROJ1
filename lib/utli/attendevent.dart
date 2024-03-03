@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import 'package:new_grad_proj/screens/upcoming_event.dart';
+import 'package:new_grad_proj/utli/bottomnavigation.dart';
 import 'package:new_grad_proj/utli/options.dart';
 import 'package:new_grad_proj/widgets/Date_Piker.dart';
 import 'package:new_grad_proj/widgets/Time_pick.dart';
@@ -14,21 +15,21 @@ class Attend_Event extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
-          automaticallyImplyLeading: false,
+          automaticallyImplyLeading: true,
           title: Row(children: [
-            Container(
+            /* Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50), color: Colors.blue),
               child: IconButton(
                   color: Colors.blue,
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Upcoming_Event())),
+                  onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => Bottom_navy())),
                   icon: const Icon(
                     size: 30,
                     Icons.arrow_back,
                     color: Colors.white,
                   )),
-            ),
+            ),*/
             const Text(
               " Event Information",
               style: TextStyle(

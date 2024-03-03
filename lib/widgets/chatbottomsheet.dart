@@ -14,20 +14,6 @@ class Chat_bottom_sheet extends StatelessWidget {
       ]),
       child: Row(children: [
         Padding(
-          padding: EdgeInsets.only(left: 8),
-          child: RotatedBox(
-            quarterTurns: 90,
-            child: IconButton(
-              icon: Icon(
-                Icons.send,
-                color: Colors.blue,
-                size: 30,
-              ),
-              onPressed: () {},
-            ),
-          ),
-        ),
-        Padding(
             padding: EdgeInsets.only(left: 10),
             child: Container(
               alignment: Alignment.centerRight,
@@ -39,6 +25,23 @@ class Chat_bottom_sheet extends StatelessWidget {
                 ),
               ),
             )),
+        SizedBox(
+          width: 40,
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 8),
+          child: RotatedBox(
+            quarterTurns: 180,
+            child: IconButton(
+              icon: Icon(
+                Icons.send,
+                color: Colors.blue,
+                size: 30,
+              ),
+              onPressed: () {},
+            ),
+          ),
+        ),
       ]),
     );
   }
