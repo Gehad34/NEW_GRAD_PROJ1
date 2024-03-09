@@ -81,41 +81,61 @@ class inbox_page extends StatelessWidget {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
+                        backgroundColor: Colors.white,
                         title: Text('Delete'),
                         content: Text(' Are YOU Sure You Want to Delete it ?'),
                         actions: <Widget>[
                           ElevatedButton(
                               onPressed: () => Navigator.of(context).pop(true),
-                              child: Text("yes")),
+                              child: Text(
+                                "yes",
+                                style: TextStyle(color: Colors.blueAccent),
+                              )),
                           ElevatedButton(
                               onPressed: () => Navigator.of(context).pop(false),
-                              child: Text("no")),
+                              child: Text("no",
+                                  style: TextStyle(color: Colors.blueAccent))),
                         ],
                       );
                     });
               }
             },
-            background: Container(
+            background: /* Container(
               height: 10,
               color: Colors.white,
               margin:
-                  EdgeInsets.only(top: 30, left: 320, bottom: 10, right: 20),
+                  EdgeInsets.only(top: 30, left: 230, bottom: 10, right: 20),
               child: Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(50)),
-                    color: Colors.blue),
+                    color: Colors.white),
                 child: Center(
-                  child: IconButton(
-                    icon: Icon(
-                      Icons.delete_outline,
-                      size: 35,
-                    ),
-                    color: Colors.white,
-                    onPressed: () {},
-                    //alignment: Alignment.bottomLeft,
-                  ),
+                    child:*/
+                Padding(
+              padding: EdgeInsets.only(left: 250),
+              child: Row(children: [
+                Container(
+                  width: 45,
+                  height: 45,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/notification.png"),
+                          fit: BoxFit.cover)),
                 ),
-              ),
+                SizedBox(
+                  width: 20,
+                ),
+                Container(
+                  width: 45,
+                  height: 45,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(8)),
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/Trash (1).png"),
+                          fit: BoxFit.cover)),
+                ),
+              ]),
             ),
             key: ValueKey(items[index]),
             child: message_page(

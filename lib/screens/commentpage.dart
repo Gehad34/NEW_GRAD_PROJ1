@@ -8,8 +8,8 @@ class comment_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        actions: [
+        automaticallyImplyLeading: true,
+        /* actions: [
           Padding(
               padding: EdgeInsets.only(right: 320),
               child: IconButton(
@@ -20,7 +20,7 @@ class comment_page extends StatelessWidget {
                     color: Colors.blue,
                     size: 30,
                   )))
-        ],
+        ],*/
         bottom: AppBar(
           automaticallyImplyLeading: false,
           title: Text(

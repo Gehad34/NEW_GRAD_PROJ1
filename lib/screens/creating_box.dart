@@ -29,7 +29,7 @@ class CreateBox extends StatelessWidget {
                       fontSize: 30),
                 ),
                 const SizedBox(
-                  width: 35,
+                  width: 20,
                 ),
                 Container(
                   child: TextButton(

@@ -23,36 +23,49 @@ class comment extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.all(0.0),
+              padding: const EdgeInsets.all(0),
               child: Row(
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: 60,
-                    height: 60,
-                    decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/Image.png'),
-                          fit: BoxFit.cover,
-                        )),
+                  Padding(
+                    padding: EdgeInsets.only(top: 20, left: 20, right: 0),
+                    child: Container(
+                      width: 60,
+                      height: 60,
+                      decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/Image.png'),
+                            fit: BoxFit.cover,
+                          )),
+                    ),
                   ),
-                  Column(
-                    children: [
-                      Text(
-                        name,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: 10,
+                    ),
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(right: 200, left: 20),
+                          child: Text(
+                            name,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
-                      ),
-                      Text(
-                        time,
-                      )
-                    ],
+                        Padding(
+                            padding: EdgeInsets.only(left: 20, right: 150),
+                            child: Text(
+                              time,
+                            ))
+                      ],
+                    ),
                   ),
                   const SizedBox(
-                    width: 200,
+                    width: 0,
                   ),
                   const Icon(
                     Icons.more_horiz,
@@ -61,20 +74,26 @@ class comment extends StatelessWidget {
                 ],
               ),
             ),
-            Text(
-              title,
-              style: TextStyle(color: Color(0xff667085)),
+            Padding(
+              padding: EdgeInsets.only(right: 210, top: 10),
+              child: Text(
+                title,
+                style: TextStyle(color: Color(0xff667085)),
+              ),
             ),
             const SizedBox(
               width: 50,
             ),
-            TextButton(
-                onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => Comment_bottom_sheet_Reply())),
-                child: Text(
-                  'Reply',
-                  style: TextStyle(color: Colors.blue),
-                )),
+            Padding(
+              padding: EdgeInsets.only(right: 280, top: 10),
+              child: TextButton(
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => Comment_bottom_sheet_Reply())),
+                  child: Text(
+                    'Reply',
+                    style: TextStyle(color: Colors.blue),
+                  )),
+            ),
             const Divider(
               color: Color(0xff667085),
               thickness: BorderSide.strokeAlignCenter,

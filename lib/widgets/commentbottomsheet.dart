@@ -6,13 +6,16 @@ class Comment_bottom_sheet extends StatelessWidget {
     return Card(
         child: Container(
       height: 65,
-      decoration: BoxDecoration(color: Colors.white, boxShadow: [
+      decoration: BoxDecoration(
+        color: Colors
+            .white, /* boxShadow: [
         BoxShadow(
             color: Colors.grey.withOpacity(.5),
             spreadRadius: 2,
             blurRadius: 10,
             offset: Offset(0, 3))
-      ]),
+      ]*/
+      ),
       child: Row(children: [
         Padding(
             padding: EdgeInsets.only(left: 10),
@@ -27,7 +30,7 @@ class Comment_bottom_sheet extends StatelessWidget {
               ),
             )),
         Padding(
-          padding: EdgeInsets.only(left: 40),
+          padding: EdgeInsets.only(left: 10),
           child: RotatedBox(
             quarterTurns: 180,
             child: IconButton(

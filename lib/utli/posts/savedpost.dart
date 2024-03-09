@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:new_grad_proj/screens/commentpage.dart';
 
 // ignore: must_be_immutable
@@ -110,7 +111,7 @@ class Saved_Post extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 45.0, top: 10, bottom: 0),
+            padding: EdgeInsets.only(left: 30.0, top: 10, bottom: 0),
             child: Row(
               children: [
                 IconButton(
@@ -123,11 +124,11 @@ class Saved_Post extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  width: 20,
+                  width: 10,
                 ),
                 IconButton(
                     icon: Icon(
-                      Icons.comment_rounded,
+                      FontAwesomeIcons.comment,
                       color: Color(0xff667085),
                     ),
                     onPressed: () => Navigator.of(context).push(
@@ -143,7 +144,7 @@ class Saved_Post extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 50,
+                  width: 100,
                 ),
                 IconButton(
                   icon: Icon(
@@ -155,10 +156,10 @@ class Saved_Post extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  width: 50,
+                  width: 20,
                 ),
                 Icon(
-                  CupertinoIcons.share_solid,
+                  FontAwesomeIcons.share,
                   color: Color(0xff667085),
                 )
               ],

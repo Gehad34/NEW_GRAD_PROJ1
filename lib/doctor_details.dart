@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new_grad_proj/doctor_reviews.dart';
+import 'package:new_grad_proj/search_for_doctors.dart';
+import 'package:new_grad_proj/utli/posts/chats.dart';
 import 'package:new_grad_proj/write_review.dart';
 
 class DoctorDetails extends StatelessWidget {
@@ -19,6 +21,26 @@ class DoctorDetails extends StatelessWidget {
                 image: DecorationImage(
                     image: AssetImage("assets/images/msdoctor.png"),
                     fit: BoxFit.cover),
+              ),
+              child: Padding(
+                padding: EdgeInsets.only(top: 0),
+                child: Container(
+                  width: 0,
+                  height: 0,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(300),
+                      color: Colors.blue),
+                  child: IconButton(
+                      color: Colors.blue,
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (context) => SearchDoctor())),
+                      icon: const Icon(
+                        size: 30,
+                        Icons.arrow_back,
+                        color: Colors.white,
+                      )),
+                ),
               ),
             ),
           ),
@@ -68,7 +90,12 @@ class DoctorDetails extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(40),
                                 color: const Color(0xff0072F9)),
                             child: IconButton(
-                              onPressed: () {},
+                              onPressed: () =>
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => Chats(
+                                            name: 'Jennifer James',
+                                            isOnline: true,
+                                          ))),
                               icon: Icon(Icons.chat_bubble),
                               color: Color.fromARGB(255, 255, 255, 255),
                               iconSize: 20,

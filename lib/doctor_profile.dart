@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:new_grad_proj/edit_clinic_info.dart';
 import 'package:new_grad_proj/edit_profile.dart';
+import 'package:new_grad_proj/search_for_doctors.dart';
 
 class DoctorProfile extends StatelessWidget {
   const DoctorProfile({super.key});

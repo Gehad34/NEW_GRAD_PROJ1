@@ -12,7 +12,9 @@ class Saved_Post_page extends StatelessWidget {
           title: Text(
             'SavedPost',
             style: TextStyle(
-                color: Colors.blue, fontSize: 30, fontWeight: FontWeight.bold),
+                color: const Color.fromARGB(255, 104, 129, 150),
+                fontSize: 30,
+                fontWeight: FontWeight.bold),
           ),
         ),
       ),
