@@ -112,7 +112,7 @@ class message_page extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (BuildContext context) {
                     return Chats(
-                      name: 'name',
+                      name: 'Ahmed Tarek',
                       isOnline: true,
                     );
                   },

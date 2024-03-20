@@ -22,78 +22,88 @@ class Home_Page extends StatelessWidget {
           textAlign: TextAlign.end,
         ),
         actions: <Widget>[
-          Container(
-            width: 30.0,
-            height: 30.0,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.blue,
-            ),
-            child: IconButton(
-              padding: const EdgeInsets.all(3),
-              icon: const Icon(
-                Icons.auto_stories_outlined,
-                color: Colors.white,
+          Padding(
+            padding: EdgeInsets.only(right: 7),
+            child: Container(
+              width: 30.0,
+              height: 30.0,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.blue,
               ),
-              onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Guide_Lines())),
+              child: IconButton(
+                padding: const EdgeInsets.all(3),
+                icon: const Icon(
+                  Icons.auto_stories_outlined,
+                  color: Colors.white,
+                ),
+                onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => Guide_Lines())),
+              ),
             ),
           ),
           const SizedBox(
-            width: 15,
+            width: 5,
           ),
-          Container(
-            width: 30.0,
-            height: 30.0,
-            transformAlignment: Alignment.bottomRight,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.blue,
-            ),
-            alignment: Alignment.center,
-            child: IconButton(
-              padding: const EdgeInsets.all(3),
-              icon: const Icon(
-                Icons.search,
-                color: Colors.white,
+          Padding(
+            padding: EdgeInsets.only(left: 7, right: 10),
+            child: Container(
+              width: 30.0,
+              height: 30.0,
+              transformAlignment: Alignment.bottomRight,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.blue,
               ),
-              onPressed: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => Search())),
+              alignment: Alignment.center,
+              child: IconButton(
+                padding: const EdgeInsets.all(3),
+                icon: const Icon(
+                  Icons.search,
+                  color: Colors.white,
+                ),
+                onPressed: () => Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => Search())),
+              ),
             ),
           ),
           const SizedBox(
-            width: 15,
+            width: 10,
           ),
-          Container(
-            width: 30.0,
-            height: 30.0,
-            alignment: Alignment.center,
-            transformAlignment: Alignment.bottomRight,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.blue,
-            ),
-            child: Stack(
-              alignment: Alignment.topLeft,
-              children: [
-                IconButton(
-                  padding: const EdgeInsets.all(3),
-                  icon: const Icon(
-                    Icons.notifications,
-                    color: Colors.white,
+          Padding(
+            padding: EdgeInsets.only(right: 15),
+            child: Container(
+              width: 30.0,
+              height: 30.0,
+              alignment: Alignment.center,
+              transformAlignment: Alignment.bottomRight,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.blue,
+              ),
+              child: Stack(
+                alignment: Alignment.topLeft,
+                children: [
+                  IconButton(
+                    padding: const EdgeInsets.all(3),
+                    icon: const Icon(
+                      Icons.notifications,
+                      color: Colors.white,
+                    ),
+                    onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (context) => Notification_page())),
                   ),
-                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Notification_page())),
-                ),
-                Container(
-                  width: 15,
-                  height: 15,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.red,
-                      border: Border.all(color: Colors.white, width: 1)),
-                ),
-              ],
+                  Container(
+                    width: 15,
+                    height: 15,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.red,
+                        border: Border.all(color: Colors.white, width: 1)),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

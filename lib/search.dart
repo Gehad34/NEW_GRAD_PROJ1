@@ -1,6 +1,8 @@
+import 'package:new_grad_proj/screens/home_page.dart';
 import 'package:new_grad_proj/search_for_doctors.dart';
 import 'package:new_grad_proj/search_for_schools.dart';
 import 'package:flutter/material.dart';
+import 'package:new_grad_proj/utli/bottomnavigation.dart';
 
 class Search extends StatelessWidget {
   Search();
@@ -9,14 +11,30 @@ class Search extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Search",
-          style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Color(0xff012306C)),
+        leading: BackButton(
+          color: Colors.black,
+          onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => Bottom_navy()),
+          ),
         ),
-        centerTitle: true,
+        /* actions: [
+          IconButton(
+              onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => ()),
+                  ),
+              icon: Icon(Icons.arrow_back))
+        ],*/
+        title: Padding(
+          padding: EdgeInsets.only(right: 100, left: 100),
+          child: Text(
+            "Search",
+            style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Color(0xff012306C)),
+          ),
+        ),
       ),
       body: Center(
         child: Column(

@@ -1,4 +1,5 @@
 import 'package:new_grad_proj/school_reviews.dart';
+import 'package:new_grad_proj/search_for_schools.dart';
 import 'package:new_grad_proj/write_review.dart';
 import 'package:flutter/material.dart';
 
@@ -11,17 +12,37 @@ class SchoolDetail extends StatelessWidget {
       body: Stack(
         children: [
           Align(
-            alignment: Alignment.topCenter,
-            child: Container(
-              height: 300,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/school1.jpeg"),
-                    fit: BoxFit.cover),
-              ),
-            ),
-          ),
+              alignment: Alignment.topCenter,
+              child: Container(
+                height: 300,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/images/school1.jpeg"),
+                      fit: BoxFit.cover),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      top: 40, left: 10, right: 310, bottom: 200),
+                  child: Container(
+                    width: 0,
+                    height: 0,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(300),
+                        color: Colors.blue),
+                    child: IconButton(
+                        color: Colors.blue,
+                        onPressed: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => SearchSchool())),
+                        icon: const Icon(
+                          size: 30,
+                          Icons.arrow_back,
+                          color: Colors.white,
+                        )),
+                  ),
+                ),
+              )),
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(

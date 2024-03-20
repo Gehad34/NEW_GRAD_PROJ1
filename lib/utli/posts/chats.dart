@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:new_grad_proj/widgets/chatbottomsheet.dart';
 import 'package:new_grad_proj/utli/chats_sample.dart';
 
 class Chats extends StatelessWidget {
@@ -57,14 +56,14 @@ class Chats extends StatelessWidget {
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(left: 0, right: 50),
+                      padding: EdgeInsets.only(left: 5, right: 90),
                       child: Text(
                         name,
                         style: TextStyle(fontSize: 20),
                       ),
                     ),
                     Padding(
-                        padding: EdgeInsets.only(left: 21, right: 50),
+                        padding: EdgeInsets.only(left: 20, right: 150),
                         child: Text("Active now",
                             style: TextStyle(
                                 fontSize: 15, color: Colors.grey[500])))

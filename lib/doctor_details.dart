@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_grad_proj/doctor_reviews.dart';
+import 'package:new_grad_proj/search.dart';
 import 'package:new_grad_proj/search_for_doctors.dart';
 import 'package:new_grad_proj/utli/posts/chats.dart';
 import 'package:new_grad_proj/write_review.dart';
@@ -23,7 +24,8 @@ class DoctorDetails extends StatelessWidget {
                     fit: BoxFit.cover),
               ),
               child: Padding(
-                padding: EdgeInsets.only(top: 0),
+                padding:
+                    EdgeInsets.only(top: 40, left: 10, right: 310, bottom: 200),
                 child: Container(
                   width: 0,
                   height: 0,

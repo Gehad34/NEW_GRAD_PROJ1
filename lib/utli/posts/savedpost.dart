@@ -26,7 +26,7 @@ class Saved_Post extends StatelessWidget {
         ),
         child: Column(children: [
           Padding(
-            padding: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.only(bottom: 0, top: 0, left: 10),
             child: Row(
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

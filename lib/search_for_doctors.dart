@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:new_grad_proj/doctor_details.dart';
+import 'package:new_grad_proj/search.dart';
 import 'package:new_grad_proj/widgets/default text field.dart';
 
 import 'package:flutter/material.dart';
@@ -12,14 +14,32 @@ class SearchDoctor extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Doctor",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
+        automaticallyImplyLeading: false,
+        actions: [
+          Padding(
+              padding: EdgeInsets.only(right: 320, left: 10),
+              child: IconButton(
+                  onPressed: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => Search()),
+                      ),
+                  icon: Icon(
+                    Icons.arrow_back,
+                    size: 30,
+                  ))),
+        ],
+        bottom: AppBar(
+          automaticallyImplyLeading: false,
+          title: Padding(
+            padding: EdgeInsets.only(left: 130),
+            child: Text(
+              "Doctor",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
+                  color: Color(0xff012306C)),
+            ),
           ),
         ),
-        centerTitle: true,
       ),
       body: Center(
         child: Column(

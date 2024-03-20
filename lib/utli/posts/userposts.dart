@@ -28,7 +28,7 @@ class userposts extends StatelessWidget {
         ),
         child: Column(children: [
           Padding(
-            padding: const EdgeInsets.all(0.0),
+            padding: const EdgeInsets.only(left: 10),
             child: Row(
                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -104,7 +104,7 @@ class userposts extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 40.0, top: 10, bottom: 0, right: 40),
+            padding: EdgeInsets.only(left: 30.0, top: 10, bottom: 0, right: 30),
             child: Row(
               children: [
                 icon_favorite(),
@@ -119,7 +119,7 @@ class userposts extends StatelessWidget {
                   },
                 ),*/
                 SizedBox(
-                  width: 30,
+                  width: 40,
                 ),
                 IconButton(
                     icon: Icon(

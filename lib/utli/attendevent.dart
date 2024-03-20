@@ -72,9 +72,9 @@ class Attend_Event extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
                 SizedBox(
-                  width: 150,
+                  width: 130,
                 ),
-                Drop_Down()
+                Padding(padding: EdgeInsets.only(right: 5), child: Drop_Down()),
                 /* Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(25),
@@ -89,7 +89,7 @@ class Attend_Event extends StatelessWidget {
                     ))*/
               ],
             )),
-        Padding(
+        /*  Padding(
             padding: EdgeInsets.only(top: 10, left: 20),
             child: Row(
               children: [
@@ -112,7 +112,7 @@ class Attend_Event extends StatelessWidget {
                       ),
                     ))
               ],
-            )),
+            )),*/
         Padding(
           padding: EdgeInsets.only(right: 200, left: 20, top: 20),
           child: Text(

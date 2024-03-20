@@ -19,7 +19,7 @@ class Upcoming_Event extends StatelessWidget {
               automaticallyImplyLeading: true,
               actions: [
                 Padding(
-                  padding: EdgeInsets.only(right: 65, left: 20),
+                  padding: EdgeInsets.only(right: 90, left: 20),
                   child: const Text(
                     'Upcoming Event',
                     style: TextStyle(
@@ -29,7 +29,7 @@ class Upcoming_Event extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
+                /* Padding(
                     padding: EdgeInsets.only(left: 0, right: 15),
                     child: Row(children: [
                       Container(
@@ -94,11 +94,11 @@ class Upcoming_Event extends StatelessWidget {
                           ],
                         ),
                       ),
-                    ])),
+                    ])),*/
               ],
               bottom: AppBar(actions: [
                 Padding(
-                  padding: EdgeInsets.only(right: 20, left: 10),
+                  padding: EdgeInsets.only(right: 120, left: 10),
                   child: Row(children: [
                     Container(
                         width: 120,
@@ -118,7 +118,7 @@ class Upcoming_Event extends StatelessWidget {
                     const SizedBox(
                       width: 130,
                     ),
-                    Container(
+                    /* Container(
                       width: 100,
                       height: 40,
                       decoration: BoxDecoration(
@@ -131,7 +131,7 @@ class Upcoming_Event extends StatelessWidget {
                             'Filter',
                             style: TextStyle(color: Colors.white),
                           )),
-                    ),
+                    ),*/
                   ]),
                 ),
               ]),
