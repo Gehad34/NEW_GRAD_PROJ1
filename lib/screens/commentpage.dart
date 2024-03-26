@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_grad_proj/utli/bottomnavigation.dart';
 import 'package:new_grad_proj/widgets/commentbottomsheet.dart';
 import 'package:new_grad_proj/utli/comments.dart';
 
@@ -7,7 +8,12 @@ class comment_page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: true,
+        leading: BackButton(
+          color: Colors.black,
+          onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => Bottom_navy()),
+          ),
+        ),
         /* actions: [
           Padding(
               padding: EdgeInsets.only(right: 320),

@@ -16,7 +16,7 @@ class Comment_bottom_sheet_Reply extends StatelessWidget {
             ]),
             child: Column(children: [
               Padding(
-                padding: EdgeInsets.only(top: 70, right: 230),
+                padding: EdgeInsets.only(top: 70, right: 310),
                 child: IconButton(
                     onPressed: () => Navigator.of(context).push(
                         MaterialPageRoute(
