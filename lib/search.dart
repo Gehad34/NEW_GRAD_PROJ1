@@ -1,4 +1,3 @@
-import 'package:new_grad_proj/screens/home_page.dart';
 import 'package:new_grad_proj/search_for_doctors.dart';
 import 'package:new_grad_proj/search_for_schools.dart';
 import 'package:flutter/material.dart';

@@ -1,6 +1,7 @@
 import 'dart:async';
-import 'package:new_grad_proj/screens/LetsStart.dart';
+//import 'package:new_grad_proj/screens/LetsStart.dart';
 import 'package:flutter/material.dart';
+import 'package:new_grad_proj/screens/onboarding_screens/onboarding_page.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => LetsStart()),
+        MaterialPageRoute(builder: (context) => OnBoardingScreens()),
       );
     });
   }

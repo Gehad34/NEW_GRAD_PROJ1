@@ -21,7 +21,6 @@ class pick_timeState extends State<pick_time> {
     super.initState();
   }
 
-  @override
   void toState() {
     timeinputto.text = ""; //set the initial value of text field
     super.initState();

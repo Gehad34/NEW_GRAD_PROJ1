@@ -44,7 +44,7 @@ class Guidelines_Gridview extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(left: 20, top: 120, right: 10),
                 child: Text(
-                  "Treat each child with respect",
+                  "Recpect thier Abilities",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               )),
@@ -65,7 +65,7 @@ class Guidelines_Gridview extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(left: 20, top: 120, right: 10),
                 child: Text(
-                  "Treat each child with respect",
+                  "Be Patient and Understanding",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
@@ -86,7 +86,7 @@ class Guidelines_Gridview extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(left: 20, top: 120, right: 10),
                 child: Text(
-                  "Treat each child with respect",
+                  "Communicate effictifly",
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               )),

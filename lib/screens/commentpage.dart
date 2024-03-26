@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_grad_proj/widgets/commentbottomsheet.dart';
 import 'package:new_grad_proj/utli/comments.dart';
-import 'package:new_grad_proj/screens/home_page.dart';
 
 class comment_page extends StatelessWidget {
   @override

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:new_grad_proj/doctor_reviews.dart';
-import 'package:new_grad_proj/search.dart';
 import 'package:new_grad_proj/search_for_doctors.dart';
 import 'package:new_grad_proj/utli/posts/chats.dart';
 import 'package:new_grad_proj/write_review.dart';

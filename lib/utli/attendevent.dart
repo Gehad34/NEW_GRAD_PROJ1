@@ -2,12 +2,11 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import 'package:new_grad_proj/screens/upcoming_event.dart';
-import 'package:new_grad_proj/utli/bottomnavigation.dart';
-import 'package:new_grad_proj/utli/options.dart';
 import 'package:new_grad_proj/widgets/Date_Piker.dart';
 import 'package:new_grad_proj/widgets/Time_pick.dart';
 import 'package:new_grad_proj/widgets/default%20text%20field.dart';
+import 'package:new_grad_proj/widgets/radio_list_government.dart';
+import 'package:new_grad_proj/widgets/radio_list_privacy.dart';
 
 class Attend_Event extends StatelessWidget {
   final controltext = TextEditingController();
@@ -72,21 +71,24 @@ class Attend_Event extends StatelessWidget {
                   style: TextStyle(color: Colors.black, fontSize: 20),
                 ),
                 SizedBox(
-                  width: 130,
+                  width: 180,
                 ),
-                Padding(padding: EdgeInsets.only(right: 5), child: Drop_Down()),
-                /* Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Colors.blue),
-                    child: IconButton(
-                      onPressed: () => Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => Drop_Down())),
-                      icon: Icon(
-                        Icons.add,
-                        color: Colors.white,
-                      ),
-                    ))*/
+                Padding(
+                    padding: EdgeInsets.only(right: 5),
+                    child: /* Drop_Down()),*/
+                        Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25),
+                                color: Colors.blue),
+                            child: IconButton(
+                              onPressed: () => Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                      builder: (context) => Radio_1())),
+                              icon: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                            )))
               ],
             )),
         /*  Padding(
@@ -202,16 +204,34 @@ class Attend_Event extends StatelessWidget {
             child: Row(
               children: [pick_time()],
             )),
-        Column(
+        // Column(
+        Row(
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 290, left: 20),
+              padding: EdgeInsets.only(left: 20),
               child: Text(
                 'Privacy',
                 style: TextStyle(color: Colors.black, fontSize: 20),
               ),
             ),
+            SizedBox(
+              width: 220,
+            ),
             Padding(
+                padding: EdgeInsets.only(right: 5, top: 10),
+                child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.blue),
+                    child: IconButton(
+                      onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Radio_2())),
+                      icon: Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      ),
+                    )))
+            /* Padding(
                 padding: EdgeInsets.only(right: 20, left: 20),
                 child: /* Theme(
                     data: ThemeData(
@@ -277,7 +297,7 @@ class Attend_Event extends StatelessWidget {
                       return Colors.blue;
                     })),
                   ),
-                ]))
+                ]))*/
           ],
         ),
         Padding(

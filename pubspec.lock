@@ -65,6 +65,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  custom_radio_group_list:
+    dependency: "direct main"
+    description:
+      name: custom_radio_group_list
+      sha256: "7d8194d8a7a6cad7adb39f31b7edb8160d9a9c74fbbff836d5cebe6e045f23c0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.2"
   dartz:
     dependency: "direct main"
     description:
@@ -381,6 +389,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  smooth_page_indicator:
+    dependency: "direct main"
+    description:
+      name: smooth_page_indicator
+      sha256: "725bc638d5e79df0c84658e1291449996943f93bacbc2cec49963dbbab48d8ae"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   source_span:
     dependency: transitive
     description:

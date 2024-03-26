@@ -1,8 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:new_grad_proj/screens/notificationspage.dart';
-import 'package:new_grad_proj/search.dart';
 import 'package:new_grad_proj/utli/attendevent.dart';
 
 import 'package:new_grad_proj/utli/posts/eventpost.dart';
